@@ -40,8 +40,7 @@ public class Bot {
         mensagem.click();
         JavascriptExecutor motorJs;
         List<String> msgs = new ArrayList<>();
-        boolean flagfinal = true; //verifica se está na ultima pagina de mensagens
-        while (flagfinal) {
+        while (true) {
             List<WebElement> mensagens = driver.findElements(By.xpath("//a[contains(@href, 'javascript:submitVisualizarMensagem')]"));
             for (WebElement msg : mensagens) {
                 msgs.add(msg.getAttribute("href"));
